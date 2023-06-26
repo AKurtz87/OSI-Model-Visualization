@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ada8a8;
+  text-align: center;
+}
+
+table {
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+td {
+  border: 2px solid black;
+  padding: 5px;
+}
+
+#osiModel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.protocols {
+  display: none;
+}
+
+.layer {
+  background-color: #fff;
+  min-width: 90%;
+}
+
+.layer-name {
+  text-align: center;
+  font-weight: bold;
+}
+
+.physicalLayer {
+  background-color: #ffcccc; /* Light red for physical layer */
+  padding: 5px;
+}
+
+.dataLinkLayer {
+  background-color: #ccccff; /* Light blue for data link layer */
+  padding: 5px;
+}
+
+.networkLayer {
+  background-color: #ccffcc; /* Light green for network layer */
+  padding: 5px;
+}
+
+.transportLayer {
+  background-color: #ffffcc; /* Light yellow for transport layer */
+  padding: 5px;
+}
+
+.sessionLayer {
+  background-color: #ffccff; /* Light purple for session layer */
+  padding: 5px;
+}
+
+.presentationLayer {
+  background-color: #f7c551; /* Grey for presentation layer */
+  padding: 5px;
+}
+
+.applicationLayer {
+  background-color: #ccffff; /* Light cyan for data */
+  padding: 5px;
+}
+
+#physicalLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ffcccc;
+  border-radius: 5px;
+}
+
+#dataLinkLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ccccff;
+  border-radius: 5px;
+}
+
+#networkLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ccffcc;
+  border-radius: 5px;
+}
+
+#transportLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ffffcc;
+  border-radius: 5px;
+}
+
+#sessionLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ffccff;
+  border-radius: 5px;
+}
+
+#presentationLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #f7c551;
+  border-radius: 5px;
+}
+
+#applicationLayer {
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ccffff;
+  border-radius: 5px;
+}

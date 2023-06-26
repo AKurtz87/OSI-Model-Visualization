@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive OSI Model</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="osiModel">
+      <div
+        class="layer"
+        id="applicationLayer"
+        onclick="toggleLayerDetails(event)"
+      >
+        <h2 class="layer-name">Application Layer</h2>
+        <p class="protocols">
+          Protocols: HTTP, HTTPS, FTP, DNS, SMTP, IMAP, POP3, DHCP, SNMP,
+          Telnet, SSH, TFTP
+        </p>
+        <table>
+          <tr>
+            <td class="applicationLayer">Data</td>
+          </tr>
+          <tr>
+            <td class="applicationLayer">"Hello"</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        class="layer"
+        id="presentationLayer"
+        onclick="toggleLayerDetails(event)"
+      >
+        <h2 class="layer-name">Presentation Layer</h2>
+        <p class="protocols">Protocols: SSL, TLS, MIME, XDR, ASN.1</p>
+        <table>
+          <tr>
+            <td class="presentationLayer">Format Info</td>
+            <td class="applicationLayer">Data</td>
+            <td class="presentationLayer">Encryption Info</td>
+          </tr>
+          <tr>
+            <td class="presentationLayer">ASCII</td>
+            <td class="applicationLayer">"Hello"</td>
+            <td class="presentationLayer">No encryption</td>
+          </tr>
+        </table>
+      </div>
+      <div class="layer" id="sessionLayer" onclick="toggleLayerDetails(event)">
+        <h2 class="layer-name">Session Layer</h2>
+        <p class="protocols">Protocols: NFS, SQL, RPC, X.225, SIP, SDP</p>
+        <table>
+          <tr>
+            <td class="sessionLayer">Session ID</td>
+            <td class="presentationLayer">Format Info</td>
+            <td class="applicationLayer">Data</td>
+            <td class="presentationLayer">Encryption Info</td>
+            <td class="sessionLayer">Connection Info</td>
+          </tr>
+          <tr>
+            <td class="sessionLayer">123456</td>
+            <td class="presentationLayer">ASCII</td>
+            <td class="applicationLayer">"Hello"</td>
+            <td class="presentationLayer">No encryption</td>
+            <td class="sessionLayer">Session open</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        class="layer"
+        id="transportLayer"
+        onclick="toggleLayerDetails(event)"
+      >
+        <h2 class="layer-name">Transport Layer</h2>
+        <p class="protocols">Protocols: TCP, UDP, SCTP, DCCP</p>
+        <table>
+          <tr>
+            <td class="transportLayer">Source Port</td>
+            <td class="sessionLayer">Session ID</td>
+            <td class="presentationLayer">Format Info</td>
+            <td class="applicationLayer">Data</td>
+            <td class="presentationLayer">Encryption Info</td>
+            <td class="sessionLayer">Connection Info</td>
+            <td class="transportLayer">Destination Port</td>
+          </tr>
+          <tr>
+            <td class="transportLayer">55892</td>
+            <td class="sessionLayer">123456</td>
+            <td class="presentationLayer">ASCII</td>
+            <td class="applicationLayer">"Hello"</td>
+            <td class="presentationLayer">No encryption</td>
+            <td class="sessionLayer">Session open</td>
+            <td class="transportLayer">80</td>
+          </tr>
+        </table>
+      </div>
+      <div class="layer" id="networkLayer" onclick="toggleLayerDetails(event)">
+        <h2 class="layer-name">Network Layer</h2>
+        <p class="protocols">
+          Protocols: IP, ICMP, IGMP, IPsec, RIP, OSPF, BGP
+        </p>
+        <table>
+          <tr>
+            <td class="networkLayer">Source IP</td>
+            <td class="transportLayer">Source Port</td>
+            <td class="sessionLayer">Session ID</td>
+            <td class="presentationLayer">Format Info</td>
+            <td class="applicationLayer">Data</td>
+            <td class="presentationLayer">Encryption Info</td>
+            <td class="sessionLayer">Connection Info</td>
+            <td class="transportLayer">Destination Port</td>
+            <td class="networkLayer">Destination IP</td>
+          </tr>
+          <tr>
+            <td class="networkLayer">192.168.1.1</td>
+            <td class="transportLayer">55892</td>
+            <td class="sessionLayer">123456</td>
+            <td class="presentationLayer">ASCII</td>
+            <td class="applicationLayer">"Hello"</td>
+            <td class="presentationLayer">No encryption</td>
+            <td class="sessionLayer">Session open</td>
+            <td class="transportLayer">80</td>
+            <td class="networkLayer">192.168.1.2</td>
+          </tr>
+        </table>
+      </div>
+      <div class="layer" id="dataLinkLayer" onclick="toggleLayerDetails(event)">
+        <h2 class="layer-name">Data Link Layer</h2>
+        <p class="protocols">
+          Protocols: Ethernet, Wi-Fi, Frame Relay, ATM, PPP, HDLC, IS-IS
+        </p>
+        <table>
+          <tr>
+            <td class="dataLinkLayer">Source MAC</td>
+            <td class="networkLayer">Source IP</td>
+            <td class="transportLayer">Source Port</td>
+            <td class="sessionLayer">Session ID</td>
+            <td class="presentationLayer">Format Info</td>
+            <td class="applicationLayer">Data</td>
+            <td class="presentationLayer">Encryption Info</td>
+            <td class="sessionLayer">Connection Info</td>
+            <td class="transportLayer">Destination Port</td>
+            <td class="networkLayer">Destination IP</td>
+            <td class="dataLinkLayer">Destination MAC</td>
+          </tr>
+          <tr>
+            <td class="dataLinkLayer">00:0a:95:9d:68:16</td>
+            <td class="networkLayer">192.168.1.1</td>
+            <td class="transportLayer">55892</td>
+            <td class="sessionLayer">123456</td>
+            <td class="presentationLayer">ASCII</td>
+            <td class="applicationLayer">"Hello"</td>
+            <td class="presentationLayer">No encryption</td>
+            <td class="sessionLayer">Session open</td>
+            <td class="transportLayer">80</td>
+            <td class="networkLayer">192.168.1.2</td>
+            <td class="dataLinkLayer">00:0b:4b:0d:de:21</td>
+          </tr>
+        </table>
+      </div>
+      <div class="layer" id="physicalLayer" onclick="toggleLayerDetails(event)">
+        <h2 class="layer-name">Physical Layer</h2>
+        <p class="protocols">
+          Protocols: DSL, ISDN, T-carrier, E-carrier, USB, Firewire, Bluetooth
+        </p>
+        <table>
+          <tr>
+            <td class="physicalLayer">Start Frame Delimiter</td>
+            <td class="dataLinkLayer">Source MAC</td>
+            <td class="networkLayer">Source IP</td>
+            <td class="transportLayer">Source Port</td>
+            <td class="sessionLayer">Session ID</td>
+            <td class="presentationLayer">Format Info</td>
+            <td class="applicationLayer">Data</td>
+            <td class="presentationLayer">Encryption Info</td>
+            <td class="sessionLayer">Connection Info</td>
+            <td class="transportLayer">Destination Port</td>
+            <td class="networkLayer">Destination IP</td>
+            <td class="dataLinkLayer">Destination MAC</td>
+            <td class="physicalLayer">End Frame Delimiter</td>
+          </tr>
+          <tr>
+            <td class="physicalLayer">SFD (in bits)</td>
+            <td class="dataLinkLayer">00:0a:95:9d:68:16</td>
+            <td class="networkLayer">192.168.1.1</td>
+            <td class="transportLayer">55892</td>
+            <td class="sessionLayer">123456</td>
+            <td class="presentationLayer">ASCII</td>
+            <td class="applicationLayer">"Hello"</td>
+            <td class="presentationLayer">No encryption</td>
+            <td class="sessionLayer">Session open</td>
+            <td class="transportLayer">80</td>
+            <td class="networkLayer">192.168.1.2</td>
+            <td class="dataLinkLayer">00:0b:4b:0d:de:21</td>
+            <td class="physicalLayer">EFD (in bits)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
