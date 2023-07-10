@@ -12,6 +12,8 @@ The project uses basic web technologies, such as HTML, CSS, and JavaScript, to r
 
 **Detailed Information:** The detailed information for each layer includes the protocols used at that layer and a visual representation of how data is encapsulated or treated at that layer.
 
+<img width="1381" alt="Screenshot 2023-07-10 at 21 39 07" src="https://github.com/AKurtz87/OSI-Model-Visualization/assets/91114967/a706cbd6-b873-40e2-9f72-7e54355ac738">
+
 ## Setup
 
 + Clone the repository
